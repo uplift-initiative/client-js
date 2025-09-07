@@ -12,7 +12,7 @@ npm install @upliftai/assistants-react
 
 ## Peer Dependencies
 
-This package requires the following peer dependencies:
+This package requires the following peer dependencies (you have to install as well):
 
 ```json
 {
@@ -22,6 +22,10 @@ This package requires the following peer dependencies:
   "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
 }
 ```
+
+## Full Example
+
+See the [examples/react-assistant-demo](../../examples/react-assistant-demo) directory for a complete working example.
 
 ## Quick Start
 
@@ -320,11 +324,6 @@ import {
   // ... and more
 } from '@upliftai/assistants-react';
 ```
-
-## Full Example
-
-See the [examples/react-assistant-demo](../../examples/react-assistant-demo) directory for a complete working example.
-
 ## License
 
 MIT
