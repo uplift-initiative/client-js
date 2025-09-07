@@ -1,0 +1,61 @@
+{
+  "name": "@upliftai/assistants-react",
+  "version": "0.1.0",
+  "description": "React components and hooks for building real-time AI assistants with UpliftAI and LiveKit",
+  "author": "UpliftAI",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist .turbo node_modules",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@livekit/components-react": "^2.8.0",
+    "livekit-client": "^2.7.0",
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@livekit/components-react": "^2.8.0",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "livekit-client": "^2.7.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upliftai/upliftai-client.git",
+    "directory": "packages/upliftai-assistants-react"
+  },
+  "keywords": [
+    "upliftai",
+    "livekit",
+    "react",
+    "real-time",
+    "ai",
+    "assistant",
+    "voice",
+    "webrtc"
+  ]
+}

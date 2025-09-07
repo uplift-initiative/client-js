@@ -1,0 +1,240 @@
+.connect-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.connect-screen h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.connect-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.connect-form input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.connect-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.connect-form button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.connect-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hint {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.assistant-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status {
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.status.connected {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.disconnected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.agent-info {
+  color: #666;
+  font-size: 14px;
+}
+
+.visualizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar-visualizer {
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+}
+
+.agent-state {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+  min-height: 30px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.instructions-section,
+.tools-section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instructions-section h3,
+.tools-section h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.instructions-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  margin-bottom: 10px;
+}
+
+.instructions-section button {
+  padding: 8px 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.instructions-section button:hover:not(:disabled) {
+  background: #218838;
+}
+
+.instructions-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tools-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tool-item {
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.tool-item label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.tool-item input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.tool-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.tool-description {
+  color: #666;
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.audio-controls {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.audio-controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.audio-controls button:hover {
+  background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+  
+  .connect-form {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .connect-form input {
+    width: 100%;
+  }
+}

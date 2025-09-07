@@ -1,0 +1,24 @@
+{
+  "name": "upliftai-client",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "pnpm recursive run build",
+    "dev": "pnpm recursive run dev",
+    "lint": "pnpm recursive run lint",
+    "test": "pnpm recursive run test",
+    "clean": "pnpm recursive run clean && rm -rf node_modules",
+    "publish-packages": "pnpm recursive run build && pnpm publish --recursive"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3"
+  }
+}
