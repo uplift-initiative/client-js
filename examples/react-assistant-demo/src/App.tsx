@@ -123,7 +123,7 @@ const SAMPLE_TOOLS: ToolConfig[] = [
 ];
 
 function AssistantView() {
-  const { updateInstruction, addTool, removeTool, isConnected, agentParticipant } = useUpliftAIRoom();
+  const { updateInstruction, addTool, removeTool, upsertTools, isConnected, agentParticipant } = useUpliftAIRoom();
   const { state: agentState } = useVoiceAssistant();
   const [instructions, setInstructions] = useState('');
   const [activeTools, setActiveTools] = useState<string[]>([]);
@@ -149,13 +149,15 @@ function AssistantView() {
   const handleToggleTool = useCallback(
     async (tool: ToolConfig) => {
       try {
+        let newActiveTools: string[] = [];
         if (activeTools.includes(tool.name)) {
-          await removeTool(tool.name);
-          setActiveTools(activeTools.filter((name) => name !== tool.name));
+          newActiveTools = activeTools.filter((name) => name !== tool.name);
         } else {
-          await addTool(tool);
-          setActiveTools([...activeTools, tool.name]);
+          newActiveTools = [...activeTools, tool.name];
         }
+        const newTools = SAMPLE_TOOLS.filter(t => newActiveTools.includes(t.name))
+        upsertTools(newTools);
+        setActiveTools(newActiveTools)
       } catch (error) {
         console.error('Failed to toggle tool:', error);
         alert(`Failed to ${activeTools.includes(tool.name) ? 'remove' : 'add'} tool`);

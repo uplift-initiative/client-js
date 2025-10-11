@@ -27,7 +27,7 @@ export interface ToolConfig {
 }
 
 export interface ToolUpdateRequest {
-  action: 'add' | 'remove' | 'replace';
+  action: 'add' | 'remove' | 'update';
   tools: ToolConfig[];
 }
 

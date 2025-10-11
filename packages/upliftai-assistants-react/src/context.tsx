@@ -71,7 +71,7 @@ export const UpliftAIRoomProvider: React.FC<UpliftAIRoomProviderProps> = ({
     if (initialTools.length > 0) {
       try {
         const request: ToolUpdateRequest = {
-          action: 'replace',
+          action: 'update',
           tools: initialTools,
         };
 
@@ -137,7 +137,7 @@ export const UpliftAIRoomProvider: React.FC<UpliftAIRoomProviderProps> = ({
         await room.registerRpcMethod(toolConfig.name, toolConfig.handler);
 
         const request: ToolUpdateRequest = {
-          action: 'replace',
+          action: 'update',
           tools: [toolConfig],
         };
 
@@ -212,7 +212,7 @@ export const UpliftAIRoomProvider: React.FC<UpliftAIRoomProviderProps> = ({
         }
 
         const request: ToolUpdateRequest = {
-          action: 'replace',
+          action: 'update',
           tools: toolConfigs,
         };
 
