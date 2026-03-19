@@ -2,7 +2,7 @@
 
 Official Node.js SDK for the [UpliftAI](https://upliftai.org) API. Build Urdu voice agents, add text-to-speech to WhatsApp bots, or transcribe call center audio.
 
-[Documentation](https://docs.upliftai.org) · [Voices](https://docs.upliftai.org/orator_voices) · [API Reference](https://docs.upliftai.org/api-reference)
+[Documentation](https://docs.upliftai.org) · [Voices](https://docs.upliftai.org/orator_voices) · [API Reference](https://docs.upliftai.org/introduction)
 
 ## Install
 
