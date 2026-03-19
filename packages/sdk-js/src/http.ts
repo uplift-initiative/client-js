@@ -1,6 +1,6 @@
 import { UpliftAIAuthError, UpliftAIError, UpliftAIInsufficientBalanceError, UpliftAIRateLimitError } from './errors';
 
-const SDK_VERSION = '0.1.0';
+const SDK_VERSION = '0.1.1';
 const DEFAULT_TIMEOUT = 30_000;
 const DEFAULT_MAX_RETRIES = 2;
 const RETRYABLE_STATUS_CODES = new Set([408, 429, 500, 502, 503, 504]);
