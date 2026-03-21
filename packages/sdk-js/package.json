@@ -1,6 +1,6 @@
 {
   "name": "@upliftai/sdk-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official UpliftAI SDK for Node.js — TTS, STT, and real-time audio streaming",
   "author": "UpliftAI",
   "license": "MIT",
